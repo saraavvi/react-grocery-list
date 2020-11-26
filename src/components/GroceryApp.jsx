@@ -1,0 +1,74 @@
+import React, { useState } from "react";
+import GroceryListForm from "./GroceryListForm";
+import GroceryList from "./GroceryList";
+
+function GroceryApp() {
+  /*const initialTodos = [
+    { task: "clean", completed: false },
+    { task: "walk cat", completed: true },
+    { task: "eat a lot", completed: false },
+  ];
+  */
+  const initialItems = [];
+  const [items, setItems] = useState(initialItems);
+
+  function addItem(value) {
+    let newItem = {
+      task: value.newItem,
+      completed: false,
+      quantity: 1,
+    };
+    let newItems = items.concat(newItem);
+    newItems.map((item, index) => {
+      return (item.id = index);
+    });
+
+    setItems(newItems);
+  }
+
+  function removeItem(id) {
+    const newItems = items.filter((item) => {
+      return item.id !== id;
+    });
+    setItems(newItems);
+  }
+
+  function updateQuantity(id, newQuantity) {
+    const newItems = items.map((item) => {
+      if (item.id === id) {
+        return { ...item, quantity: newQuantity };
+      } else {
+        return item;
+      }
+    });
+    setItems(newItems);
+  }
+
+  return (
+    <div className="GroceryApp">
+      <h1>Grocery List</h1>
+      <GroceryListForm addItem={addItem} />
+      <GroceryList
+        items={items}
+        removeItem={removeItem}
+        updateQuantity={updateQuantity}
+      />
+    </div>
+  );
+}
+
+export default GroceryApp;
+
+/*
+- todo app
+  - todo form
+  - todo list 
+    - todoItem
+
+
+
+each todo will have
+  id
+  task
+  completed
+*/
