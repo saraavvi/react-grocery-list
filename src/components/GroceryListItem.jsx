@@ -1,4 +1,5 @@
 import React from "react";
+import "../GroceryListItem.css";
 
 function GroceryListItem({ id, name, quantity, removeItem, updateQuantity }) {
   function remove() {
@@ -16,15 +17,17 @@ function GroceryListItem({ id, name, quantity, removeItem, updateQuantity }) {
   }
 
   return (
-    <div>
+    <div className="GroceryListItem">
       <li>
         {name}
-        <button onClick={subtract} disabled={quantity < 1}>
-          -
-        </button>
-        {quantity}
-        <button onClick={add}>+</button>
-        <button onClick={remove}>x</button>
+        <div className="GroceryListItem-change">
+          <button onClick={subtract} disabled={quantity < 2}>
+            -
+          </button>
+          {quantity}
+          <button onClick={add}>+</button>
+          <button onClick={remove}>x</button>
+        </div>
       </li>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import GroceryApp from "./components/GroceryApp";
+import "./App.css";
 
 function App() {
   return (

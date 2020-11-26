@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../GroceryListForm.css";
 
 function GroceryListForm({ addItem }) {
   //state for inputvalue that is a new todo
@@ -14,7 +15,7 @@ function GroceryListForm({ addItem }) {
   }
 
   return (
-    <div>
+    <div className="GroceryListForm">
       <input
         placeholder="New todo..."
         type="text"

@@ -1,0 +1,14 @@
+.GroceryListItem li {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.GroceryListItem button {
+  border-radius: 20%;
+  border: none;
+  margin: 5px;
+}
+
+.GroceryListItem-change {
+}

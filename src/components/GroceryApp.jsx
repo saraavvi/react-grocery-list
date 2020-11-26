@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import GroceryListForm from "./GroceryListForm";
 import GroceryList from "./GroceryList";
+import "../GroceryApp.css";
 
 function GroceryApp() {
   /*const initialTodos = [
@@ -14,7 +15,7 @@ function GroceryApp() {
 
   function addItem(value) {
     let newItem = {
-      task: value.newItem,
+      name: value.newItem,
       completed: false,
       quantity: 1,
     };
@@ -46,13 +47,17 @@ function GroceryApp() {
 
   return (
     <div className="GroceryApp">
-      <h1>Grocery List</h1>
-      <GroceryListForm addItem={addItem} />
-      <GroceryList
-        items={items}
-        removeItem={removeItem}
-        updateQuantity={updateQuantity}
-      />
+      <h1 className="GroceryApp-title">Grocery List</h1>
+      <div className="GroceryApp-form">
+        <GroceryListForm addItem={addItem} />
+      </div>
+      <div className="GroceryApp-list">
+        <GroceryList
+          items={items}
+          removeItem={removeItem}
+          updateQuantity={updateQuantity}
+        />
+      </div>
     </div>
   );
 }
@@ -60,15 +65,15 @@ function GroceryApp() {
 export default GroceryApp;
 
 /*
-- todo app
-  - todo form
-  - todo list 
-    - todoItem
+- grocery app
+  - form
+  - list 
+    - Item
 
 
 
-each todo will have
+each item will have
   id
-  task
+  
   completed
 */

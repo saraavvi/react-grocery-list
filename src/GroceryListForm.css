@@ -1,0 +1,21 @@
+li {
+  list-style: none;
+}
+
+.GroceryListForm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.GroceryListForm input {
+  border-radius: 5px 0px 0px 5px;
+  border: none;
+  padding: 0.5rem;
+}
+
+.GroceryListForm button {
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  width: 100%;
+  background-color: white;
+}

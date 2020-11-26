@@ -1,0 +1,16 @@
+.GroceryApp {
+  background-color: rgb(183, 175, 211);
+  width: 220px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 2px 4px 6px 0px rgb(60, 58, 70);
+}
+.GroceryApp-title {
+  font-size: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.GroceryApp-form {
+  margin-bottom: 10px;
+}
