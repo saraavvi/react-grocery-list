@@ -1,10 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+
 .GroceryApp {
   background-color: rgb(183, 175, 211);
-  width: 220px;
+  width: 270px;
   margin: 100px auto;
   padding: 20px;
   border-radius: 3px;
   box-shadow: 2px 4px 6px 0px rgb(60, 58, 70);
+  font-family: "Dosis", sans-serif;
+  font-size: 1.2rem;
 }
 .GroceryApp-title {
   font-size: 1.5rem;

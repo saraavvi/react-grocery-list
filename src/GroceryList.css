@@ -2,3 +2,11 @@
   display: flex;
   flex-direction: column;
 }
+
+.GroceryList-total {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid black;
+}

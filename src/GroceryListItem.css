@@ -1,5 +1,5 @@
 .GroceryListItem li {
-  margin-top: 1rem;
+  margin-top: 0.2rem;
   display: flex;
   justify-content: space-between;
 }
@@ -8,7 +8,4 @@
   border-radius: 20%;
   border: none;
   margin: 5px;
-}
-
-.GroceryListItem-change {
 }
