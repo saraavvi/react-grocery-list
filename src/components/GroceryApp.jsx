@@ -4,12 +4,6 @@ import GroceryList from "./GroceryList";
 import "../GroceryApp.css";
 
 function GroceryApp() {
-  /*const initialTodos = [
-    { task: "clean", completed: false },
-    { task: "walk cat", completed: true },
-    { task: "eat a lot", completed: false },
-  ];
-  */
   const initialItems = [];
   const [items, setItems] = useState(initialItems);
 
@@ -47,7 +41,7 @@ function GroceryApp() {
 
   return (
     <div className="GroceryApp">
-      <h1 className="GroceryApp-title">Grocery List</h1>
+      <h2 className="GroceryApp-title">Grocery List</h2>
       <div className="GroceryApp-form">
         <GroceryListForm addItem={addItem} />
       </div>

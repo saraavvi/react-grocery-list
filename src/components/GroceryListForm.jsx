@@ -24,6 +24,7 @@ function GroceryListForm({ addItem }) {
   return (
     <form className="GroceryListForm">
       <input
+        maxLength="15"
         placeholder="New item..."
         type="text"
         onChange={handleChange}

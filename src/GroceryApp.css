@@ -3,6 +3,15 @@
 body {
   background-color: #ffdad7;
 }
+h1 {
+  font-family: "Dosis", sans-serif;
+  text-align: center;
+  margin-top: 0;
+  font-size: 3rem;
+  /* color: white; */
+  background: rgba(255, 255, 255, 0.342);
+  padding: 2rem;
+}
 .GroceryApp {
   background-color: #ffce85;
   width: 270px;

@@ -4,9 +4,12 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <GroceryApp />
-    </div>
+    <>
+      <h1>React Grocery List App</h1>
+      <div className="App">
+        <GroceryApp />
+      </div>
+    </>
   );
 }
 
