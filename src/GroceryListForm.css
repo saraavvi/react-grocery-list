@@ -18,4 +18,6 @@ li {
   border: none;
   width: 100%;
   background-color: white;
+  text-align: right;
+  padding: 10px;
 }

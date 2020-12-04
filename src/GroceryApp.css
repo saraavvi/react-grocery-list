@@ -1,20 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
 
+body {
+  background-color: #ffdad7;
+}
 .GroceryApp {
-  background-color: rgb(183, 175, 211);
+  background-color: #ffce85;
   width: 270px;
   margin: 100px auto;
   padding: 20px;
   border-radius: 3px;
-  box-shadow: 2px 4px 6px 0px rgb(60, 58, 70);
+  box-shadow: 4px 6px 8px 0px #c5a9a8;
   font-family: "Dosis", sans-serif;
   font-size: 1.2rem;
 }
 .GroceryApp-title {
   font-size: 1.5rem;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #00000067;
+  padding-bottom: 0.5rem;
 }
 .GroceryApp-form {
   margin-bottom: 10px;
+}
+button {
+  outline: none;
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+}
+input {
+  outline: none;
+  border: none;
 }

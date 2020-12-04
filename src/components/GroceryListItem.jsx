@@ -21,12 +21,20 @@ function GroceryListItem({ id, name, quantity, removeItem, updateQuantity }) {
       <li>
         {name}
         <div className="GroceryListItem-change">
-          <button onClick={subtract} disabled={quantity < 2}>
+          <button
+            className="GroceryListItem-qty-btn"
+            onClick={subtract}
+            disabled={quantity < 2}
+          >
             -
           </button>
           {quantity}
-          <button onClick={add}>+</button>
-          <button onClick={remove}>x</button>
+          <button className="GroceryListItem-qty-btn" onClick={add}>
+            +
+          </button>
+          <button className="GroceryListItem-rm-btn" onClick={remove}>
+            x
+          </button>
         </div>
       </li>
     </div>

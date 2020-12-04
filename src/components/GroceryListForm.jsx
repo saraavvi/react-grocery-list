@@ -2,30 +2,36 @@ import React, { useState } from "react";
 import "../GroceryListForm.css";
 
 function GroceryListForm({ addItem }) {
-  //state for inputvalue that is a new todo
+  //state for inputvalue that is a new grocery item
   const [value, setValue] = useState({ newItem: "" });
   // update state based on input change
   function handleChange(event) {
     setValue({ newItem: event.target.value });
   }
-  //gets the value from state
-  function handleAddClick() {
+  //gets the current value from state
+  function handleAddClick(e) {
     addItem(value);
     setValue({ newItem: "" });
+    e.preventDefault();
+  }
+
+  function handleKeypress(e) {
+    if (e.keyCode === 13) {
+      handleAddClick();
+    }
   }
 
   return (
-    <div className="GroceryListForm">
+    <form className="GroceryListForm">
       <input
-        placeholder="New todo..."
+        placeholder="New item..."
         type="text"
         onChange={handleChange}
         value={value.newItem}
+        onKeyPress={handleKeypress}
       ></input>
-      <button type="button" onClick={handleAddClick}>
-        Add
-      </button>
-    </div>
+      <button onClick={handleAddClick}>Add</button>
+    </form>
   );
 }
 

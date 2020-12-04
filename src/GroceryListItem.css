@@ -9,3 +9,11 @@
   border: none;
   margin: 5px;
 }
+
+.GroceryListItem-rm-btn {
+  background-color: #ffce85;
+}
+
+.GroceryListItem-qty-btn {
+  background-color: white;
+}
