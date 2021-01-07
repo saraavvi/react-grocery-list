@@ -17,3 +17,11 @@
 .GroceryListItem-qty-btn {
   background-color: white;
 }
+
+.GroceryListItem-completed {
+  color: grey;
+  text-decoration: line-through;
+}
+span {
+  cursor: pointer;
+}

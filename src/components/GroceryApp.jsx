@@ -4,16 +4,20 @@ import GroceryList from "./GroceryList";
 import "../GroceryApp.css";
 
 function GroceryApp() {
-  const initialItems = [];
+  const initialItems = [
+    { name: "bananas", completed: false, quantity: 3, id: 1 },
+    { name: "chicken", completed: false, quantity: 1, id: 2 },
+    { name: "milk", completed: true, quantity: 2, id: 3 },
+  ];
   const [items, setItems] = useState(initialItems);
 
   function addItem(value) {
     let newItem = {
-      name: value.newItem,
+      name: value,
       completed: false,
       quantity: 1,
     };
-    let newItems = items.concat(newItem);
+    let newItems = [newItem, ...items];
     newItems.map((item, index) => {
       return (item.id = index);
     });
@@ -38,6 +42,27 @@ function GroceryApp() {
     });
     setItems(newItems);
   }
+  //funktion som tar de som är completed och flyttar längst ned i listan. Triggas när något bir completed
+  function checkItemDone(id) {
+    const newItems = items.map((item) => {
+      if (item.id === id) {
+        console.log(item.completed);
+        if (!item.completed) {
+          return { ...item, completed: true };
+        } else {
+          return { ...item, completed: false };
+        }
+      } else {
+        return item;
+      }
+    });
+    //loopa över alla items och lägg de som är completed sist
+    newItems.sort(function (a, b) {
+      return a.completed - b.completed;
+    });
+
+    setItems(newItems);
+  }
 
   return (
     <div className="GroceryApp">
@@ -50,6 +75,7 @@ function GroceryApp() {
           items={items}
           removeItem={removeItem}
           updateQuantity={updateQuantity}
+          checkItemDone={checkItemDone}
         />
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import GroceryListItem from "./GroceryListItem";
 import "../GroceryList.css";
 
-function GroceryList({ items, removeItem, updateQuantity }) {
+function GroceryList({ items, removeItem, updateQuantity, checkItemDone }) {
   // calculate total items in grocery list
   const totalItems = items.reduce((total, item) => total + item.quantity, 0);
 
@@ -13,9 +13,11 @@ function GroceryList({ items, removeItem, updateQuantity }) {
           <GroceryListItem
             key={index}
             name={item.name}
+            completed={item.completed}
             removeItem={removeItem}
             quantity={item.quantity}
             updateQuantity={updateQuantity}
+            checkItemDone={checkItemDone}
             {...item}
           />
         );
