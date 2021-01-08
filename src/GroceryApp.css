@@ -8,7 +8,6 @@ h1 {
   text-align: center;
   margin-top: 0;
   font-size: 3rem;
-  /* color: white; */
   background: rgba(255, 255, 255, 0.342);
   padding: 2rem;
 }
@@ -16,7 +15,7 @@ h1 {
   background-color: #ffce85;
   width: 350px;
   margin: 100px auto;
-  padding: 20px;
+  padding: 40px 20px;
   border-radius: 3px;
   box-shadow: 4px 6px 8px 0px #c5a9a8;
   font-family: "Dosis", sans-serif;

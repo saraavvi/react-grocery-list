@@ -1,27 +1,19 @@
 .GroceryListItem li {
   margin-top: 0.2rem;
   display: flex;
-  justify-content: space-between;
-}
-
-.GroceryListItem button {
-  border-radius: 20%;
-  border: none;
-  margin: 5px;
+  align-items: center;
 }
 
 .GroceryListItem-rm-btn {
   background-color: #ffce85;
-}
-
-.GroceryListItem-qty-btn {
-  background-color: white;
+  margin-left: auto;
 }
 
 .GroceryListItem-completed {
   color: grey;
   text-decoration: line-through;
 }
-span {
+box-icon {
   cursor: pointer;
+  margin: 0.2rem;
 }

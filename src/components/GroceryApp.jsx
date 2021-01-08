@@ -21,7 +21,6 @@ function GroceryApp() {
     newItems.map((item, index) => {
       return (item.id = index);
     });
-
     setItems(newItems);
   }
 
@@ -32,17 +31,17 @@ function GroceryApp() {
     setItems(newItems);
   }
 
-  function updateQuantity(id, newQuantity) {
-    const newItems = items.map((item) => {
-      if (item.id === id) {
-        return { ...item, quantity: newQuantity };
-      } else {
-        return item;
-      }
-    });
-    setItems(newItems);
-  }
-  //funktion som tar de som är completed och flyttar längst ned i listan. Triggas när något bir completed
+  // function updateQuantity(id, newQuantity) {
+  //   const newItems = items.map((item) => {
+  //     if (item.id === id) {
+  //       return { ...item, quantity: newQuantity };
+  //     } else {
+  //       return item;
+  //     }
+  //   });
+  //   setItems(newItems);
+  // }
+
   function checkItemDone(id) {
     const newItems = items.map((item) => {
       if (item.id === id) {
@@ -56,11 +55,10 @@ function GroceryApp() {
         return item;
       }
     });
-    //loopa över alla items och lägg de som är completed sist
+
     newItems.sort(function (a, b) {
       return a.completed - b.completed;
     });
-
     setItems(newItems);
   }
 
@@ -74,7 +72,6 @@ function GroceryApp() {
         <GroceryList
           items={items}
           removeItem={removeItem}
-          updateQuantity={updateQuantity}
           checkItemDone={checkItemDone}
         />
       </div>
@@ -83,17 +80,3 @@ function GroceryApp() {
 }
 
 export default GroceryApp;
-
-/*
-- grocery app
-  - form
-  - list 
-    - Item
-
-
-
-each item will have
-  id
-  
-  completed
-*/

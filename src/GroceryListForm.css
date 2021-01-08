@@ -1,7 +1,3 @@
-li {
-  list-style: none;
-}
-
 .GroceryListForm {
   display: flex;
   justify-content: space-between;
